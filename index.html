@@ -6,13 +6,25 @@
 <body>
     <h2>Form Đăng Nhập</h2>
     <div id="login-form">
-        <label>UserName:</label>
+        <label>tên đăng nhập:</label>
         <input type="text" id="textboxusername"><br><br>
         
-        <label>Password:</label>
-        <input type="text" id="textboxmatkhau"><br><br>
+        <label>mật khẩu:</label>
+        <input type="password" id="textboxmatkhau"><br><br>
         
         <button id="btnlogin">đăng nhập</button>
     </div>
+    <script>
+        document.getElementById("btnlogin").onclick = function() {
+            var user = document.getElementById("textboxusername").value; 
+            var pass = document.getElementById("textboxmatkhau").value;
+            
+            if (user === "admin" && pass === "admin") {
+                alert("Đăng nhập thành công! Chuyển qua trang đăng nhập thành công...");
+            } else {
+                alert("Sai tên đăng nhập hoặc mật khẩu!");
+            }
+        };
+    </script>
 </body>
 </html>
